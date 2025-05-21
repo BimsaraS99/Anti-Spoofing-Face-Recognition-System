@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>889</width>
+    <height>637</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #1a1a2e, stop:1 #16213e
+    );
+    color: #e0e0e0;
+}
+
+/* Main window and central widget */
+QMainWindow {
+    background: transparent;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #394867;
+    border: 1px solid #4a5a7b;
+    border-radius: 4px;
+    padding: 5px;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color: #4a5a7b;
+}
+
+QPushButton:pressed {
+    background-color: #2c3a4d;
+}
+
+/* Line edits */
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #252a3d;
+    border: 1px solid #4a5a7b;
+    border-radius: 3px;
+    padding: 5px;
+    selection-background-color: #394867;
+}
+
+/* Labels */
+QLabel {
+    color: #e0e0e0;
+}
+
+/* Combo boxes */
+QComboBox {
+    background-color: #252a3d;
+    border: 1px solid #4a5a7b;
+    border-radius: 3px;
+    padding: 5px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+    border: 0px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #252a3d;
+    selection-background-color: #394867;
+}
+
+/* Sliders */
+QSlider::groove:horizontal {
+    height: 8px;
+    background: #252a3d;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: #e0e0e0;
+    border: 1px solid #4a5a7b;
+    width: 16px;
+    margin: -4px 0;
+    border-radius: 8px;
+}
+
+/* Checkboxes and radio buttons */
+QCheckBox, QRadioButton {
+    spacing: 5px;
+}
+
+QCheckBox::indicator, QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #4a5a7b;
+}
+
+QCheckBox::indicator {
+    background-color: #252a3d;
+    border-radius: 3px;
+}
+
+QRadioButton::indicator {
+    background-color: #252a3d;
+    border-radius: 8px;
+}
+
+QCheckBox::indicator:checked, QRadioButton::indicator:checked {
+    background-color: #394867;
+}
+
+/* Group boxes */
+QGroupBox {
+    border: 1px solid #4a5a7b;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px;
+}
+
+/* Scroll bars */
+QScrollBar:vertical {
+    border: 1px solid #252a3d;
+    background: #252a3d;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #394867;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+/* Progress bars */
+QProgressBar {
+    border: 1px solid #4a5a7b;
+    border-radius: 3px;
+    text-align: center;
+}
+
+QProgressBar::chunk {
+    background-color: #394867;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="screen">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>850</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="known_name">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    font-size: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+    padding: 10px 20px;
+    border-radius: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>520</y>
+      <width>106</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    border: 1px solid #5a5a5a;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-family: 'Segoe UI';
+    font-size: 11pt;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #3d3d3d;
+}
+QPushButton:pressed {
+    background-color: #1e1e1e;
+}
+QPushButton:disabled {
+    background-color: #555555;
+    color: #999999;
+    border: 1px solid #444444;
+}</string>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="name_text">
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>520</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+                border: 2px solid #7f8c8d;
+                border-radius: 8px;
+                padding: 10px;
+                font-size: 24px;
+                color: #2c3e50;
+                background-color: #ecf0f1;
+            }
+            QTextEdit:focus {
+                border: 2px solid #2980b9;
+                background-color: #ffffff;
+            }</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:24px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>889</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

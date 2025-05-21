@@ -1,0 +1,13 @@
+PyQt5
+opencv-python
+mediapipe
+numpy
+mtcnn
+keras-facenet
+tensorflow
+easydict
+tqdm
+torchvision
+torch
+Pillow
+tensorboardX
